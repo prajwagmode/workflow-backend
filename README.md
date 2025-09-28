@@ -16,8 +16,8 @@ Prerequisites:
 1. Configure DB (edit `src/main/resources/application.properties` as needed):
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/flowdb
-spring.datasource.username=root
-spring.datasource.password=xxxx
+spring.datasource.username=username
+spring.datasource.password=password
 Build:
 
 bash
@@ -37,7 +37,7 @@ bash
 Copy code
 curl -s -X POST http://localhost:8080/auth/login \
   -H "Content-Type: application/json" \
-  -d '{"username":"admin","password":"admin123"}' | jq .
+  -d '{"username":"user","password":"pass"}' | jq .
 Response includes token. Use it for protected endpoints:
 
 Use header Authorization: Bearer <token>
