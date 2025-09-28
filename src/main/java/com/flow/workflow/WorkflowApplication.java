@@ -22,8 +22,8 @@ public class WorkflowApplication {
 	@Bean
 	public CommandLineRunner createAdmin(UserRepository userRepository, PasswordEncoder passwordEncoder) {
 		return args -> {
-			String adminUsername = "admin";
-			String adminPassword = "xxxxxx";
+			String adminUsername = "user";
+			String adminPassword = "password";
 			if (userRepository.findByUsername(adminUsername).isEmpty()) {
 				User admin = User.builder()
 						.username(adminUsername)
