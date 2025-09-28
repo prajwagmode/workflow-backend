@@ -23,7 +23,7 @@ public class WorkflowApplication {
 	public CommandLineRunner createAdmin(UserRepository userRepository, PasswordEncoder passwordEncoder) {
 		return args -> {
 			String adminUsername = "admin";
-			String adminPassword = "admin123";
+			String adminPassword = "xxxxxx";
 			if (userRepository.findByUsername(adminUsername).isEmpty()) {
 				User admin = User.builder()
 						.username(adminUsername)
